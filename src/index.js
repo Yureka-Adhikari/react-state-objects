@@ -15,6 +15,16 @@ class Student extends React.Component {
     };
   }
 
+  setFavColour = () => {
+    this.setState({ favorite_colour: "Blue" });
+    this.setState({ favorite_sub: "Maths" });
+  };
+
+  setFavSub = () => {
+    this.setState({ favorite_colour: "Purple" });
+    this.setState({ favorite_sub: "English" });
+  };
+
   render() {
     return (
       <div>
@@ -23,6 +33,10 @@ class Student extends React.Component {
         <p> I am in grade {this.state.grade} </p>
         <p> My favourite colour is {this.state.favorite_colour} </p>
         <p> My favourite subject is {this.state.favorite_sub} </p>
+
+        <button onClick={this.setFavColour}> CLICK ON MEEEE </button>
+        <br></br>
+        <button onClick={this.setFavSub}> REVERSE </button>
       </div>
     );
   }
